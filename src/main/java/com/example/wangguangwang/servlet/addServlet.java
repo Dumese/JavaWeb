@@ -18,7 +18,8 @@ public class addServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
 
         String userName = request.getParameter("username");
         String password = request.getParameter("password");
@@ -31,7 +32,9 @@ public class addServlet extends HttpServlet {
 
             response.sendRedirect("success.jsp");
         }else {
-
+            System.out.println("注册失败");
+            request.setAttribute("msg","注册失败，请重新注册");
+            request.getRequestDispatcher("add.jsp").forward(request,response);
         }
     }
 }

@@ -37,9 +37,15 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public UserEntity add(String username, String password, String name) {
+
+        System.out.println(username);
+        System.out.println(password);
+        System.out.println(name);
+
+
         UserEntity user = null;
 
-        String sql = "INSERT INTO user()VALUES(?, ?, ?)";
+        String sql = "INSERT INTO user()VALUES(null, ?, ?, ?)";
         Connection con = null;
         PreparedStatement pst = null;
         ResultSet rs = null;
@@ -51,6 +57,7 @@ public class UserDAOImpl implements UserDAO {
             pst.setString(2, password);
             pst.setString(3, name);
             if(pst.executeUpdate() < 0){
+                System.out.println("注册失败");
                 throw new Exception("注册失败！！！");
             }
 

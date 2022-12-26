@@ -18,7 +18,7 @@ public class LoginFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         String URI = httpServletRequest.getRequestURI();
 
-        if (URI.contains("/index.jsp") || URI.contains("indexServlet") || URI.contains("/add.jsp")){
+        if (URI.contains("/index.jsp") || URI.contains("indexServlet") || URI.contains("/add.jsp") || URI.contains("addServlet")){
             chain.doFilter(request, response);
         }
 
