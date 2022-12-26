@@ -9,6 +9,8 @@ public class UserEntity {
 
     private String name;
 
+    private String Status;
+
     public String getUserName() {
         return userName;
     }
@@ -31,5 +33,13 @@ public class UserEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
     }
 }

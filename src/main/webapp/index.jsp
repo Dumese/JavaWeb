@@ -66,7 +66,6 @@
             font-size: 18px;
         }
         .add{
-            text-decoration: none;
             margin-top: 10px;
         }
     </style>
@@ -86,7 +85,7 @@
         </div>
 
         <div class="add">
-            <a href="add.jsp">注册</a>
+            <a style="text-decoration: none" href="add.jsp">注册</a>
         </div>
     </div>
 </div>

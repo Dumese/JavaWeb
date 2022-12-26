@@ -26,6 +26,7 @@ public class UserDAOImpl implements UserDAO {
                 user = new UserEntity();
                 user.setUserName(username);
                 user.setName(rs.getString(4));
+                user.setStatus(rs.getString(5));
             }
         }catch (SQLException e){
             e.printStackTrace();
@@ -45,7 +46,7 @@ public class UserDAOImpl implements UserDAO {
 
         UserEntity user = null;
 
-        String sql = "INSERT INTO user()VALUES(null, ?, ?, ?)";
+        String sql = "INSERT INTO user()VALUES(null, ?, ?, ?, ?)";
         Connection con = null;
         PreparedStatement pst = null;
         ResultSet rs = null;
@@ -56,6 +57,7 @@ public class UserDAOImpl implements UserDAO {
             pst.setString(1, username);
             pst.setString(2, password);
             pst.setString(3, name);
+            pst.setString(4, "0");
             if(pst.executeUpdate() < 0){
                 System.out.println("注册失败");
                 throw new Exception("注册失败！！！");
