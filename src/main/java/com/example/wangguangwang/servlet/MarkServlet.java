@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet(name = "markServlet", value = "/markServlet")
-public class markServlet extends HttpServlet {
+public class MarkServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);

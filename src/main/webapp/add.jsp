@@ -90,7 +90,6 @@
     </div>
     <div class = "content">
         <div class="rg_form">
-            <!-- 定义表单 form-->
             <form action="addServlet" method="post">
                 <table >
                     <tr>

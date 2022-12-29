@@ -74,5 +74,13 @@
             </div>
         </div>
     </div>
+
+
 </body>
 </html>
+
+<script type="text/javascript">
+    var msg = '${msg}';
+    if(msg){
+        alert(msg);    }
+</script>

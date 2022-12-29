@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet(name = "addServlet", value = "/addServlet")
-public class addServlet extends HttpServlet {
+public class AddServlet extends HttpServlet {
     private UserServiceImpl userServiceImpl = new UserServiceImpl();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

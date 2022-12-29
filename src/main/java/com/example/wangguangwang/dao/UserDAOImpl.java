@@ -76,6 +76,7 @@ public class UserDAOImpl implements UserDAO {
         user = new UserEntity();
         user.setUserName(username);
         user.setName(name);
+        user.setStatus("0");
 
         return user;
     }
